@@ -3,16 +3,27 @@
 
 <head>
     <title>YouTube Video Info</title>
-    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Include the CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
 <body>
-    <h1>Video Title</h1>
-    <p id="video-title">Loading...</p>
-    <h2>Video Description</h2>
-    <p id="video-description">Loading...</p>
-    <script src="popup.js"></script>
-    <p id="video-url">Video URL</p>
+    <div id="logo-container">
+        <img id="logo" src="assets/images/logo.png" alt="Logo">
+    </div>
+    <div id="info-box">
+        <h1>Video Title</h1>
+        <p id="video-title">Loading...</p>
+    </div>
+    <div id="info-box">
+        <h2>Video Description</h2>
+        <p id="video-description">Loading...</p>
+    </div>
+    <div id="info-box">
+        <p id="video-url">Video URL</p>
+    </div>
+    <button id="analyze-button">Analyze Text</button>
+    <script src="../lib/aws-sdk.js"></script>
+    <script src="../js/background.js"></script>
 
 </body>
 

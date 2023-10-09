@@ -6,7 +6,8 @@
         "activeTab",
         "tabs",
         "storage",
-        "scripting"
+        "scripting",
+        "webNavigation"
     ],
     "host_permissions": [
         "https://www.youtube.com/*"
@@ -15,7 +16,7 @@
         "default_popup": "popup.html"
     },
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "./js/background.js"
     },
     "content_scripts": [
         {
@@ -23,8 +24,12 @@
                 "https://www.youtube.com/*"
             ],
             "js": [
-                "content.js"
-            ]
+                "js/content.js"
+            ],
+            "type": "module"
         }
-    ]
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
 }
